@@ -1,0 +1,88 @@
+.landing_page_container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+
+  h1 {
+    font-size: 0;
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {
+    height: 200px;
+    width: 500px;
+    background-image: url("../../assets/Your_budget_logo.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+nav.landing_page_card {
+  height: 90%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  flex-direction: column;
+  box-shadow: 8px 10px 20px 0 rgba(46,61,73,.15);
+  border-radius: 20px;
+}
+
+.landing_page_btns_container {
+  padding: 0 30px 30px 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  height: 50px;
+  width: 150px;
+  border-radius: 100px;
+  border: none;
+  padding: 10px;
+  margin: 10px 10px 10px 10px;
+  cursor: pointer;
+  font-family: 'Muli', sans-serif;
+  font-weight: bold;
+  transition: 0.3s ease-in;
+}
+
+.log_in {
+  color: black;
+  background-color: rgba(250, 226, 60, 1);
+
+  &:hover {
+    color: white;
+    background-color: rgb(187,156,31);
+  }
+}
+
+.register {
+  color: white;
+  background-color: rgba(145, 40, 78, 1);
+  border: none;
+  &:hover {
+    color: black;
+    background-color: transparent;
+    border: solid 3px rgba(222, 54, 111, 1);
+  }
+}
+
+input {
+  width: 400px;
+  height: 25px;
+}
