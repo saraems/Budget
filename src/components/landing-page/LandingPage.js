@@ -11,7 +11,9 @@ import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
 
-import Header from './Header/Header'
+import Header from './Header/Header';
+import queryString from 'query-string';
+
 
 
 const DialogTitle = withStyles(theme => ({
@@ -115,18 +117,20 @@ class LandingPage extends Component {
     register = (e) => {
         e.preventDefault();
 
+
         if (this.state.registerEmail.includes('.') && this.state.registerPassword === this.state.registerPasswordConfirmation && this.state.registerEmail.includes('@') && this.state.registerPassword.length > 6) {
+
+            console.log('registered!', this.state.registerEmail, this.state.registerPassword);
 
             const register = {
                 method: 'POST',
                 headers: {
-                    'Access-Control-Allow-Origin': '*',
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/x-www-form-urlencoded',
                 },
-                body: {
-                    username: this.state.registerEmail,
-                    password: this.state.registerPassword
-                }
+                body: queryString.stringify({
+                    'password': this.state.registerPassword,
+                    'username': this.state.registerEmail,
+                })
             };
 
             fetch(`https://budget-app-back-end.herokuapp.com/register`, register)
