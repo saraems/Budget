@@ -1,99 +1,74 @@
-.page_container {
-  width: 1200px;
+section.app_desc {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-header {
-  width: 100%;
-  background: orange;
-}
-
-.landing_page_container {
-  height: 100vh;
-  width: 100%;
+.app_desc_wrapper {
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: whitesmoke;
-
-  h1 {
-    font-size: 0;
-    width: 100%;
-    padding: 30px;
-    box-sizing: border-box;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .logo {
-    height: 200px;
-    width: 500px;
-    background-image: url("../../assets/Your_budget_logo.svg");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
 }
 
-nav.landing_page_card {
-  height: 90%;
-  width: 70%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-  flex-direction: column;
-  box-shadow: 8px 10px 20px 0 rgba(46,61,73,.15);
-  border-radius: 20px;
-}
 
-.landing_page_btns_container {
-  padding: 0 30px 30px 30px;
+.app_desc__left {
+  width: 60%;
+  height: 100%;
+  padding: 5% 0 5% 0;
   box-sizing: border-box;
+  font-size: 15px;
   display: flex;
-  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
-.btn {
-  list-style: none;
-  height: 50px;
-  width: 150px;
-  border-radius: 100px;
-  border: none;
-  padding: 10px;
-  margin: 10px 10px 10px 10px;
-  cursor: pointer;
-  text-align: center;
-  font-family: 'Muli', sans-serif;
+h2 {
+  text-transform: uppercase;
+  line-height: 30px;
+}
+
+.app_desc__right {
+  width: 40%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+  background-image: url("../../assets/Smartphone_budget_logo.png");
+}
+
+.square {
+  text-transform: uppercase;
+  letter-spacing: 2px;
   font-weight: bold;
-  transition: 0.3s ease-in;
-}
-
-.log_in {
-  color: black;
-  background-color: rgba(250, 226, 60, 1);
-
-  &:hover {
-    color: white;
-    background-color: rgb(187,156,31);
-  }
-}
-
-.register {
+  font-family: 'Muli', sans-serif;
   color: white;
-  background-color: rgba(145, 40, 78, 1);
-  border: none;
+  border: 2px solid orange;
+  background-color: orange;
+  //border-radius: 80px;
+  padding: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+
   &:hover {
-    color: black;
-    background-color: transparent;
-    border: solid 3px rgba(222, 54, 111, 1);
+    transform: translateY(-5px);
+    //background-color: white;
+    //color: orange;
+    box-shadow: 8px 10px 20px 0 rgba(46,61,73,.15);
   }
 }
 
 input {
   width: 400px;
   height: 25px;
+  margin-bottom: 10px;
+}
+
+.error {
+  font-size: 12px;
+  color: red;
 }
