@@ -15,15 +15,19 @@ section.app_desc {
 
 
 .app_desc__left {
-  width: 60%;
+  width: 50%;
   height: 100%;
-  padding: 5% 0 5% 0;
+  padding: 2% 5% 2% 0;
   box-sizing: border-box;
   font-size: 15px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   justify-content: center;
+
+  p {
+    line-height: 25px;
+  }
 }
 
 h2 {
@@ -32,13 +36,43 @@ h2 {
 }
 
 .app_desc__right {
-  width: 40%;
+  width: 50%;
   height: 100%;
-  background-repeat: no-repeat;
-  background-size: 50%;
-  background-position: center;
-  background-image: url("../../assets/Smartphone_budget_logo.png");
+  background-color: crimson;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 8px 10px 20px 0 rgba(46,61,73,.15);
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    height: 100%;
+    width: 100%;
+  }
+
+  //.left_arrow {
+  //  font-size: 70px;
+  //  position: absolute;
+  //  top: 40%;
+  //  left: 20px;
+  //}
+  //
+  //.right_arrow {
+  //  font-size: 40px;
+  //  position: absolute;
+  //  top: 40%;
+  //  right: 20px;
+  //}
+
+  .hidden {
+    display: none;
+  }
+
 }
+
+
 
 .square {
   text-transform: uppercase;

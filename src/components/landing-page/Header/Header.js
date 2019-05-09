@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import './Header.scss'
 
+import { Link } from 'react-router-dom';
+
+
+
 class Header extends Component {
 
   render() {
@@ -14,9 +18,9 @@ class Header extends Component {
                         <nav>
                             <ul>
                                 <li>
-                                    <a className='btn' onClick={() => this.props.handleClickOpen('RegisterOpen')}>
+                                    <Link  to='/register' className='btn' onClick={() => this.props.handleClickOpen('RegisterOpen')}>
                                         <span>Register</span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
                                     <a className='btn' onClick={() => this.props.handleClickOpen('LogInOpen')}>

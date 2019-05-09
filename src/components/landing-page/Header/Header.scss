@@ -2,6 +2,8 @@ header {
   width: 100%;
   height: 120px;
   display: flex;
+  background-color: orange;
+  //background-color: orange;
   justify-content: center;
   align-items: flex-start;
   margin-bottom: 30px;
@@ -44,19 +46,21 @@ nav {
 }
 
 .btn {
-  color: orange;
-  font-size: 20px;
+  color: black;
+  font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 15px 20px 15px 20px;
-  border-radius: 90px;
+  padding: 15px 5px 15px 5px;
+  border: 2px solid transparent;
+  border-radius: 5px;
   font-family: 'Muli', sans-serif;
   transition: 0.3s ease-in-out;
   cursor: pointer;
 
   &:hover {
     color: white;
-    background-color: orange;
-    box-shadow: 8px 10px 20px 0 rgba(46,61,73,.15);
+    //background-color: white;
+    //border: 2px solid black;
+    //box-shadow: 8px 10px 20px 0 rgba(46,61,73,.15);
   }
 }
