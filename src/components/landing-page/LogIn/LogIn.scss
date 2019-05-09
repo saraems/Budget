@@ -1,0 +1,58 @@
+.login_dialog {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+.close_dialog_window {
+  position: absolute;
+  color: lightgrey;
+  cursor: pointer;
+  font-size: 1.5rem;
+  right: 20px;
+  top: 5px;
+
+  &:hover {
+    color: black;
+  }
+}
+
+.dialog_window {
+  height: 13rem;
+  width: 25rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  padding: 40px;
+  box-shadow: 8px 10px 20px 0 rgba(46, 61, 73, .15);
+  z-index: 3;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+
+  .inputs_container {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+  }
+
+}
+
+.dialog_window .dialog_window__header {
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+}

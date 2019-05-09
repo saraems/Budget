@@ -3,12 +3,6 @@ import './LogIn.scss'
 
 import queryString from 'query-string';
 
-import { DialogTitle, DialogContent, DialogActions } from '../Dialog/Dialog'
-
-import Dialog from "@material-ui/core/Dialog";
-import Button from "@material-ui/core/Button";
-
-
 class LogIn extends Component {
 
     state = {
@@ -63,31 +57,44 @@ class LogIn extends Component {
 
     render() {
         return (
-            <Dialog
-                onClose={this.props.handleClose}
-                aria-labelledby="customized-dialog-title"
-                open={this.props.open === 'LogInOpen'}
-            >
-                <DialogTitle id="customized-dialog-title" onClose={this.props.handleClose}>
-                    LogIn
-                </DialogTitle>
-                <form onSubmit={(e) => this.logIn(e)}>
-                    <DialogContent>
+            <section className='login_dialog'>
+                <div className='dialog_window'>
 
-                        <input onChange={(e) => this.logInMali(e)} type='email' placeholder='e-mail'/><br/>
-                        <input onChange={(e) => this.logInPassword(e)} type='password' placeholder='password'/><br/>
+                    <p className='dialog_window__header '> Logowanie</p>
 
-                        <p className='error'> { this.state.errorMessage } </p>
+                    <span className='close_dialog_window' onClick={ () => this.props.blur('LogInOpen') }> x </span>
 
-                    </DialogContent>
-                    <DialogActions>
-                        <Button onClick={this.handleClose} color="primary" type="submit" value="Submit">
-                            Log In
-                        </Button>
-                    </DialogActions>
-                </form>
 
-            </Dialog>
+                    <form onSubmit={(e) => this.logIn(e)}>
+
+                        <div className="inputs_container">
+
+                            <input
+                                onChange={(e) => this.logInMali(e)}
+                                type='email'
+                                placeholder='e-mail'/><br/>
+
+                            <input
+                                onChange={(e) => this.logInPassword(e)}
+                                ype='password' placeholder='password'/><br/>
+
+                            <p className='error'> { this.state.errorMessage } </p>
+
+                        </div>
+
+                        <button
+                            className='main_btn'
+                            onClick={ this.handleClose }
+                            type="submit"
+                            value="Submit"
+                        >
+                            Zaloguj sie
+                        </button>
+
+                    </form>
+
+                </div>
+            </section>
         );
     }
 }

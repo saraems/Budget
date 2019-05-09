@@ -1,0 +1,46 @@
+
+.left_arrow {
+  font-size: 70px;
+  position: absolute;
+  top: 40%;
+  left: 20px;
+}
+
+.right_arrow {
+  font-size: 40px;
+  position: absolute;
+  top: 40%;
+  right: 20px;
+}
+
+
+ul.slider {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+
+  li {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+}
+
+.plan {
+  background-image: url("../../../assets/plan.jpg");
+}
+
+.save {
+  background-image: url("../../../assets/save.jpg");
+}
+
+.multiple {
+  background-image: url("../../../assets/multiple.jpeg");
+}
+
+.spend {
+  background-image: url("../../../assets/spend.png");
+}

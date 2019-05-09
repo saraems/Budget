@@ -18,9 +18,9 @@ class Header extends Component {
                         <nav>
                             <ul>
                                 <li>
-                                    <Link  to='/register' className='btn' onClick={() => this.props.handleClickOpen('RegisterOpen')}>
+                                    <a className='btn' onClick={() => this.props.handleClickOpen('RegisterOpen')}>
                                         <span>Register</span>
-                                    </Link>
+                                    </a>
                                 </li>
                                 <li>
                                     <a className='btn' onClick={() => this.props.handleClickOpen('LogInOpen')}>

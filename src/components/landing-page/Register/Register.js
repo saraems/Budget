@@ -3,12 +3,6 @@ import './Register.scss'
 
 import queryString from 'query-string';
 
-import { DialogTitle, DialogContent, DialogActions } from '../Dialog/Dialog'
-
-import Dialog from "@material-ui/core/Dialog";
-import Button from "@material-ui/core/Button";
-
-
 class Register extends Component {
 
     state = {
@@ -81,34 +75,36 @@ class Register extends Component {
         }
     };
 
+
   render() {
     return (
-        <Dialog
-            onClose={this.props.handleClose}
-            aria-labelledby="customized-dialog-title"
-            open={this.props.open === 'RegisterOpen'}
-        >
-            <DialogTitle id="customized-dialog-title" onClose={this.props.handleClose}>
-                Registration
-            </DialogTitle>
-            <form onSubmit={(e) => this.register(e)}>
+        <section className='register_dialog'>
+            <div className='dialog_window'>
 
-                <DialogContent>
-                    <input onChange={(e) => this.registerEmail(e)} type='email' placeholder='e-mail'/><br/>
+                <p className='dialog_window__header'>Rejestracja</p>
 
-                    <input onChange={(e) => this.registerPassword(e)} type='password' placeholder='password'/><br/>
+                <span className='close_dialog_window' onClick={ () => this.props.blur('RegisterOpen') }> x </span>
 
-                    <input onChange={(e) => this.registerPasswordConfirmation(e)} type='password' placeholder='confirm password'/>
-                    <p className='error'> { this.state.errorMessage } </p>
-                </DialogContent>
-                <DialogActions>
-                    <Button color="secondary" type="submit" value="Submit">
-                        Register
-                    </Button>
-                </DialogActions>
+                <form onSubmit={(e) => this.register(e)}>
 
-            </form>
-        </Dialog>
+                    <div className="inputs_container">
+
+                        <input onChange={(e) => this.registerEmail(e)} type='email' placeholder='e-mail'/><br/>
+
+                        <input onChange={(e) => this.registerPassword(e)} type='password' placeholder='password'/><br/>
+
+                        <input onChange={(e) => this.registerPasswordConfirmation(e)} type='password' placeholder='confirm password'/>
+                        <p className='error'> { this.state.errorMessage } </p>
+
+                    </div>
+
+                    <button className='main_btn' color="secondary" type="submit" value="Submit">
+                        Zarerestruj sie
+                    </button>
+
+                </form>
+            </div>
+        </section>
     );
   }
 }

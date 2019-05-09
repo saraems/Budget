@@ -1,105 +1,23 @@
-section.app_desc {
-  height: 500px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.app_desc_wrapper {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-.app_desc__left {
-  width: 50%;
-  height: 100%;
-  padding: 2% 5% 2% 0;
-  box-sizing: border-box;
-  font-size: 15px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: center;
-
-  p {
-    line-height: 25px;
-  }
-}
-
-h2 {
-  text-transform: uppercase;
-  line-height: 30px;
-}
-
-.app_desc__right {
-  width: 50%;
-  height: 100%;
-  background-color: crimson;
-  border-radius: 5px;
-  position: relative;
-  box-shadow: 8px 10px 20px 0 rgba(46,61,73,.15);
-
-  ul {
-    list-style: none;
-  }
-
-  li {
-    height: 100%;
-    width: 100%;
-  }
-
-  //.left_arrow {
-  //  font-size: 70px;
-  //  position: absolute;
-  //  top: 40%;
-  //  left: 20px;
-  //}
-  //
-  //.right_arrow {
-  //  font-size: 40px;
-  //  position: absolute;
-  //  top: 40%;
-  //  right: 20px;
-  //}
-
-  .hidden {
-    display: none;
-  }
-
-}
-
-
-
-.square {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: bold;
-  font-family: 'Muli', sans-serif;
-  color: white;
-  border: 2px solid orange;
-  background-color: orange;
-  //border-radius: 80px;
-  padding: 20px;
-  margin-top: 10px;
+.main_btn {
+  height: 2.3rem;
+  width: 10rem;
+  font-size: 0.6rem;
+  letter-spacing: 0.1rem;
   cursor: pointer;
-  transition: 0.3s ease-in;
-
-  &:hover {
-    transform: translateY(-5px);
-    //background-color: white;
-    //color: orange;
-    box-shadow: 8px 10px 20px 0 rgba(46,61,73,.15);
-  }
+  border: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  color: white;
+  box-shadow: 8px 10px 20px 0 rgba(46, 61, 73, .15);
+  background: rgb(221, 190, 92);
+  background: linear-gradient(90deg, rgb(248, 153, 1) 22%, rgb(255, 195, 47) 73%);
 }
 
 input {
   width: 400px;
   height: 25px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .error {
