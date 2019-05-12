@@ -1,18 +1,17 @@
 
-.left_arrow {
-  font-size: 70px;
-  position: absolute;
-  top: 40%;
-  left: 20px;
-}
-
-.right_arrow {
-  font-size: 40px;
-  position: absolute;
-  top: 40%;
-  right: 20px;
-}
-
+//.left_arrow {
+//  font-size: 70px;
+//  position: absolute;
+//  top: 40%;
+//  left: 20px;
+//}
+//
+//.right_arrow {
+//  font-size: 40px;
+//  position: absolute;
+//  top: 40%;
+//  right: 20px;
+//}
 
 ul.slider {
   height: 100%;
@@ -22,25 +21,43 @@ ul.slider {
   li {
     height: 100%;
     width: 100%;
+    align-items: center;
+    justify-content: center;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: 1s ease-in-out;
   }
+}
 
+h2 {
+  font-family: 'Inconsolata', monospace;
+  margin-bottom: 2.5rem;
+  line-height: 2rem;
+  color: white;
+  text-align: center;
 }
 
 .plan {
-  background-image: url("../../../assets/plan.jpg");
+  background: linear-gradient(120deg, rgba(250, 250, 250, 0.4) 30%, rgba(128, 128, 128, 0.6) 70%), url("../../../assets/plan.jpg");
 }
 
 .save {
-  background-image: url("../../../assets/save.jpg");
+  background: url("../../../assets/save.jpg");
 }
 
 .multiple {
-  background-image: url("../../../assets/multiple.jpeg");
+  background: linear-gradient(120deg, rgba(250, 250, 250, 0.4) 30%, rgba(128, 128, 128, 0.6) 70%), url("../../../assets/multiple.jpeg");
 }
 
 .spend {
-  background-image: url("../../../assets/spend.png");
+  background: linear-gradient(120deg, rgba(250, 250, 250, 0.4) 30%, rgba(128, 128, 128, 0.6) 70%), url("../../../assets/spend.png");
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  display: flex;
 }

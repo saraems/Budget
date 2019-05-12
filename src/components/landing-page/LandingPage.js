@@ -6,6 +6,7 @@ import Header from './Header/Header';
 import Register from "./Register/Register";
 import LogIn from "./LogIn/LogIn";
 import SectionFirst from "./Section_first/Section_first";
+import Footer from "./Footer/Footer";
 
 
 class LandingPage extends Component {
@@ -46,6 +47,7 @@ class LandingPage extends Component {
             <SectionFirst/>
             <Register open={this.state.open} handleClose={this.handleClose} blur={ this.blur }/>
             <LogIn open={this.state.open} handleClose={this.handleClose} blur={ this.blur }/>
+            <Footer/>
         </Fragment>
     );
   }

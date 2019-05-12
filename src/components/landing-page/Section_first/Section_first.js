@@ -1,6 +1,6 @@
 import React, {Component } from 'react';
 import './Section_first.scss'
-import Slider from "../slider/slider";
+import Slider from "../Slider/Slider";
 
 class SectionFirst extends Component {
 
@@ -10,15 +10,13 @@ class SectionFirst extends Component {
             <div className='page_container'>
                 <div className="app_desc_wrapper">
                     <div className="app_desc__left">
-                        <h3>
-                            Uporządkuj finanse i przejmij kontrolę nad swoim budżetem używając tylko jednej aplikacji
-                        </h3><br/>
+                        <h3>Jezeli Twoim celem jest osiagniecie finansowej niezaleznosci. Zacznij sledzic i planowac swoj budzet, a zamiast arkusza kalkulacyjnego uzyj naszej aplikacji!</h3>
+
                         <p>
-                            Niezależność fianansowa dla wielu nie kojarzy się z niczym konkretnym, albo wydaje się być niemożliwa do osiągnięcia bez ponadprzeciętnego talentu do zarządznia pieniędzmi. Każda nadwyżka w budżecie domowym często rozchodzi się tak szybko jak szybko się pojawia. Nowy sprzęt elektorniczny, prezenty, sprzęt domowy, ubrania, coraz lepsze jedznie, smaochód, wakacje, drugi samochów, kredyt hipoteczny, trzeci samochów, wakacje… Staropolskie porzekadło „postaw się, a zastwa się” wydaje się dotyczyć ponad połowy Polaków, chyba po prostu z natury lubimy wydawać pieniądze.
-                            <br/>
-                            <h4>Zacznij sledzic i planowac swoj budzet z aplikacja <e>Twoje Finanse</e>.</h4>
-                        </p><br/>
-                        <button className='square'> Wypróbuj aplikację przed rejestracja</button>
+                            Niezależność fianansowa dla wielu nie kojarzy się z niczym konkretnym, albo wydaje się być niemożliwa do osiągnięcia bez ponadprzeciętnego talentu do zarządznia pieniędzmi. Każda nadwyżka w budżecie domowym często rozchodzi się tak szybko jak szybko się pojawia. Pierwszym krokiem do oszczedzania jest robienie comiesiecznego przegladu wydatkow. Gdy uswiadomisz sobie na co wwydajesz pieniadze latwiej bedzie Ci zarzadzac swoim budzetem.
+                        </p>
+
+                        <button className='try_demo_btn'> Wypróbuj aplikację przed rejestracja</button>
                     </div>
                     <div className="app_desc__right">
                         {/*<ul>*/}

@@ -2,15 +2,20 @@
   height: 2.3rem;
   width: 10rem;
   font-size: 0.6rem;
+  font-weight: bold;
   letter-spacing: 0.1rem;
-  cursor: pointer;
-  border: none;
-  border-radius: 50px;
   text-transform: uppercase;
-  color: white;
+  color: black;
+  background: white;
+  border: 2px solid rgb(248, 153, 1);
   box-shadow: 8px 10px 20px 0 rgba(46, 61, 73, .15);
-  background: rgb(221, 190, 92);
-  background: linear-gradient(90deg, rgb(248, 153, 1) 22%, rgb(255, 195, 47) 73%);
+  cursor: pointer;
+
+  &:hover {
+    background: linear-gradient(90deg, rgb(248, 153, 1) 22%, rgb(255, 195, 47) 73%);
+    color: white;
+    border: none;
+  }
 }
 
 input {

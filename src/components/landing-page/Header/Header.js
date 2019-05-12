@@ -19,12 +19,12 @@ class Header extends Component {
                             <ul>
                                 <li>
                                     <a className='btn' onClick={() => this.props.handleClickOpen('RegisterOpen')}>
-                                        <span>Register</span>
+                                        <span>Rejestracja</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a className='btn' onClick={() => this.props.handleClickOpen('LogInOpen')}>
-                                       <span>Log in</span>
+                                       <span>Logowanie</span>
                                     </a>
                                 </li>
                             </ul>
