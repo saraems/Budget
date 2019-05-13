@@ -7,6 +7,7 @@ class UserPanel extends Component {
   render() {
     return (
         <Fragment>
+<<<<<<< HEAD
 
             <header className='user_panel__header'>
                 <div className="page_container">
@@ -38,6 +39,15 @@ class UserPanel extends Component {
                     </div>
                 </div>
             </main>
+=======
+            <div className="user_panel">
+                <div className="page_container">
+                    <div className="main_panel">
+
+                    </div>
+                </div>
+            </div>
+>>>>>>> 6fc4ba9ea03f6e84e31775e58867a9307d46b136
         </Fragment>
     );
   }
