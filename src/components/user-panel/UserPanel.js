@@ -7,7 +7,13 @@ class UserPanel extends Component {
   render() {
     return (
         <Fragment>
-            WELCOME TO USER PANEL!
+            <div className="user_panel">
+                <div className="page_container">
+                    <div className="main_panel">
+
+                    </div>
+                </div>
+            </div>
         </Fragment>
     );
   }

@@ -1,0 +1,16 @@
+.user_panel {
+  width: 100%;
+  padding: 5% 0 5% 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(243, 240, 236);
+}
+
+
+.main_panel {
+  height: 80vh;
+  background-color: white;
+  border: 1px solid lightgrey;
+  box-shadow: 8px 10px 20px 0 rgba(46,61,73,.15);
+}
