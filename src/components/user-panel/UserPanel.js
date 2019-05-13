@@ -37,13 +37,6 @@ class UserPanel extends Component {
                     </div>
                 </div>
             </main>
-            <div className="user_panel">
-                <div className="page_container">
-                    <div className="main_panel">
-
-                    </div>
-                </div>
-            </div>
         </Fragment>
     );
   }
