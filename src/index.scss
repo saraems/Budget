@@ -1,3 +1,5 @@
+@import "grid";
+
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +19,6 @@ code {
   height: 100%;
   padding: 0 4% 0 4%;
 }
-
 
 $colors: (
         prmary: rgba(250, 226, 60, 1),
