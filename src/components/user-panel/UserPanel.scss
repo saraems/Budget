@@ -1,26 +1,37 @@
 .user_panel__header {
   height: 60px;
-  margin-bottom: 0;
-  box-shadow: 0 3px 5px rgba(100, 100, 100, 0.49);
+  width: 100%;
+  margin: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user_panel__header_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+
+div.user_panel_nav__logo {
+  height: 50%;
+  width: 200px;
+  font-size: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../../assets/Your_budget_logo.svg");
+  cursor: pointer;
 }
 
 ul.user_panel__nav {
   height: 100%;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-
-  div.user_panel_nav__logo {
-    height: 50%;
-    width: 200px;
-    font-size: 0;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url("../../assets/Your_budget_logo.svg");
-    cursor: pointer;
-  }
 
   li {
     height: 100%;
@@ -32,18 +43,22 @@ ul.user_panel__nav {
     text-align: center;
     cursor: pointer;
     box-sizing: border-box;
-    transition: 0.3s ease-in-out;
+    transition: 0.1s ease-in-out;
 
     &:hover {
-     color: white;
+     color: black;
     }
   }
 }
 
 main {
+  height: calc(100vh - 60px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
   background-color: rgb(242, 239, 235);
 }
-//min-height: 80px;
+
 .user_panel {
   width: 100%;
   padding: 5% 0 5% 0;
@@ -59,4 +74,66 @@ main {
   background-color: white;
   border: 1px solid lightgrey;
   box-shadow: 8px 10px 20px 0 rgba(46,61,73,.15);
+}
+
+.user_panel__add_document {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.user_panel__add_document__header {
+  font-size: 2.2rem;
+  padding: 3rem 2rem 1rem 2rem;
+}
+
+.user_panel__add_document__header_subheader {
+  font-size: 1.2rem;
+}
+
+.user_panel__add_document__tip {
+  margin-bottom: 2rem;
+}
+
+.highlighted {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ffc32f;
+}
+
+.action__btn {
+  letter-spacing: 1px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffc32f;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+   background-color: #161616;
+  }
+}
+
+.uploader__btn {
+  width: 20rem;
+  height: 5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.add_form_btn {
+  font-size: 0.9rem;
+  width: 12rem;
+  height: 2rem;
+  margin: 1rem;
+}
+
+.user_panel__add_document__form {
+  font-size: 0.9rem;
 }
