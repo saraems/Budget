@@ -1,0 +1,54 @@
+.user_panel__header {
+  height: 60px;
+  width: 100%;
+  margin: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user_panel__header_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+
+a.user_panel_nav__logo {
+  height: 50%;
+  width: 200px;
+  font-size: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../../../assets/Your_budget_logo.svg");
+  cursor: pointer;
+}
+
+ul.user_panel__nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+  a {
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    box-sizing: border-box;
+    transition: 0.1s ease-in-out;
+
+    &:hover {
+      color: black;
+    }
+  }
+}

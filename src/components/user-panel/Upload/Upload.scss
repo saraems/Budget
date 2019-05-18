@@ -1,0 +1,92 @@
+.user_panel {
+  width: 100%;
+  padding: 5% 0 5% 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(243, 240, 236);
+}
+
+
+.main_panel {
+  height: 80vh;
+  background-color: white;
+  border: 1px solid lightgrey;
+  box-shadow: 8px 10px 20px 0 rgba(46,61,73,.15);
+}
+
+.user_panel__add_document {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: 0.5s ease-in-out;
+}
+
+.user_panel__add_document__header {
+  font-size: 2.2rem;
+  padding: 3rem 2rem 1rem 2rem;
+}
+
+.user_panel__add_document__header_subheader {
+  font-size: 1.2rem;
+}
+
+.user_panel__add_document__tip {
+  margin-bottom: 2rem;
+}
+
+.highlighted {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ffc32f;
+}
+
+.action__btn {
+  letter-spacing: 1px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffc32f;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #161616;
+  }
+}
+
+.uploader__btn {
+  width: 20rem;
+  height: 5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.fa-file {
+  margin-left: 1rem;
+}
+
+.file_name {
+  font-size: 0.8rem;
+}
+
+.add_form_btn {
+  font-size: 0.9rem;
+  width: 12rem;
+  height: 2rem;
+  margin: 1rem;
+}
+
+.user_panel__add_document__form {
+  margin: 2rem 1rem 0 1rem;
+  font-size: 0.9rem;
+}
+
+input[type="file"] {
+  display: none;
+}
