@@ -4,12 +4,12 @@
   "private": true,
   "homepage": "https://saraems.github.io/Budget/",
   "dependencies": {
-    "@amcharts/amcharts4": "^4.4.6",
     "node-sass": "^4.11.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "recharts": "^1.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
