@@ -71,10 +71,30 @@ class LineChar extends Component {
           stroke="blue"
           label={<CustomizedLabel />}
         />
-        <Line type="monotone" dataKey="food" stroke="red" />
-        <Line type="monotone" dataKey="cleaningSupplies" stroke="green" />
-        <Line type="monotone" dataKey="transport" stroke="violet" />
-        <Line type="monotone" dataKey="traveling" stroke="crimson" />
+        <Line
+          type="monotone"
+          dataKey="food"
+          stroke="red"
+          label={<CustomizedLabel />}
+        />
+        <Line
+          type="monotone"
+          dataKey="cleaningSupplies"
+          stroke="green"
+          label={<CustomizedLabel />}
+        />
+        <Line
+          type="monotone"
+          dataKey="transport"
+          stroke="violet"
+          label={<CustomizedLabel />}
+        />
+        <Line
+          type="monotone"
+          dataKey="traveling"
+          stroke="crimson"
+          label={<CustomizedLabel />}
+        />
         <XAxis dataKey="name" />
       </LineChart>
     );
