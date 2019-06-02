@@ -5,7 +5,17 @@ import { exampleData } from "./sampleData/exampleData";
 
 import { Pie, PieChart, Cell } from "recharts";
 
-const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "crimson", "green"];
+const COLORS = [
+  "#0088FE",
+  "#00C49F",
+  "#FFBB28",
+  "crimson",
+  "green",
+  "yellow",
+  "pink",
+  "gold",
+  "red"
+];
 
 const RADIAN = Math.PI / 180;
 const renderCustomizedLabel = ({
@@ -37,14 +47,14 @@ const renderCustomizedLabel = ({
 class PieChar extends Component {
   render() {
     return (
-      <PieChart width={400} height={400}>
+      <PieChart width={600} height={600}>
         <Pie
           data={rawData}
-          cx={200}
-          cy={200}
+          cx={300}
+          cy={300}
           labelLine={false}
           label={renderCustomizedLabel}
-          outerRadius={80}
+          outerRadius={200}
           fill="#8884d8"
           dataKey="totalExpenses"
         >
