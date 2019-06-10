@@ -1,36 +1,29 @@
 $gap: 3%;
-$bpMobile: 980px;
+$bpMobile: 720px;
 $columns: 12;
 
 .page_container {
-
   padding-left: $gap;
   padding-right: $gap;
 
   .row {
-
     margin-left: -$gap;
     margin-right: -$gap;
 
     [class*="col-"] {
       padding-left: $gap;
       padding-right: $gap;
-      padding-bottom: $gap;
+      padding-bottom: 10px;
     }
   }
 
-
   @media (min-width: $bpMobile) {
-
     .row {
-
       display: flex;
 
       @for $i from 1 through $columns {
-
         .col-#{$i}-#{$columns} {
-
-          width: (100/ $columns * $i) *1%;
+          width: (100 / $columns * $i) * 1%;
         }
       }
     }

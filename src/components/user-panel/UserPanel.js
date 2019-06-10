@@ -9,32 +9,9 @@ import Evaluation from "./Evaluation/Evaluation";
 import Comparison from "./Comparison/Comparison";
 import Expenses from "./Expenses/Expenses";
 import Savings from "./Savings/Savings";
+import Uploaded from "./Uploaded/Uploaded";
 
 class UserPanel extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      filePath: ""
-    };
-  }
-
-  readFile = e => {
-    const files = e.target.files;
-
-    this.setState({
-      filePath: files[0].name
-    });
-
-    let reader = new FileReader();
-
-    reader.readAsDataURL(files[0]);
-    reader.onload = e => {
-      // console.warn("loaded", e.target.result)
-      // url, fetch to the backend - end the file, POST
-      // .then => {}
-    };
-  };
-
   render() {
     return (
       <HashRouter>
@@ -42,16 +19,12 @@ class UserPanel extends Component {
         <Switch>
           <main>
             <div className="user_panel___main_panel page_container">
-              <Route
-                exact
-                path="/home"
-                component={Upload}
-                filePath={this.state.filePath}
-              />
+              <Route exact path="/home" component={Upload} />
               <Route exact path="/home/evaluation" component={Evaluation} />
               <Route exact path="/home/expenses" component={Expenses} />
               <Route exact path="/home/comparison" component={Comparison} />
               <Route exact path="/home/savings" component={Savings} />
+              <Route exact path="/home/upload" component={Uploaded} />
             </div>
           </main>
         </Switch>
