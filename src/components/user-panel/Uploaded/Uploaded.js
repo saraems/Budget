@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./Uploaded.scss";
+import { connect } from "react-redux";
+
 
 const user = {
   expenses: {
@@ -137,5 +139,16 @@ class Uploaded extends Component {
     );
   }
 }
+
+// const mapStateToProps = (state: RootState) => ({
+//   categories: expenses.categories(state),
+// });
+
+// export default connect(
+//   mapStateToProps,
+//   {
+//     contentDescriptionChanged: createActions.contentDescriptionChanged,
+//   }
+// )(Uploaded);
 
 export default Uploaded;
