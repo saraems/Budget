@@ -1,6 +1,8 @@
 // import { combineReducers } from "redux";
 // import categories from "./categories";
 // import upload from "./upload";
+import { ADD_CATEGORY, REMOVE_CATEGORY } from '../containers/action-types';
+
 
 // const initialState = {
 //   user: {
@@ -43,24 +45,22 @@
 
 const initialState = {
   files: [],
-  expenses: {
-    categories: [
-      "Mieszkanie",
-      "Żywność i środki czystości",
-      "Internet i telefon",
-      "Przejazdy",
-      "Edukacja",
-      "Podróże",
-      "Jedzenie poza domem",
-      "Zdrowie i Uroda",
-      "Ubrania",
-      "Rozrywka",
-      "Prezenty",
-      "Elektronika",
-      "Kary",
-      "Inne"
-    ]
-  },
+  categories: [
+    "Mieszkanie",
+    "Żywność i środki czystości",
+    "Internet i telefon",
+    "Przejazdy",
+    "Edukacja",
+    "Podróże",
+    "Jedzenie poza domem",
+    "Zdrowie i Uroda",
+    "Ubrania",
+    "Rozrywka",
+    "Prezenty",
+    "Elektronika",
+    "Kary",
+    "Inne"
+  ],
   articles: [{title: 'Article 1', addingDate: '01/10/2010'}]
 }
 
@@ -71,13 +71,30 @@ const initialState = {
 //   return state;
 // };
 
+// function rootReducer(state = initialState, action) {
+//   switch (action.type) {
+//     case 'ADD_RTICLE': 
+//     return [
+//       ...state,
+//       action.payload
+//     ];
+//         default:
+//       return state;
+//   }
+// };
+
 function rootReducer(state = initialState, action) {
   switch (action.type) {
-    case 'ADD_RTICLE': 
-    return [
-      ...state,
-      action.payload
-    ];
+    case ADD_CATEGORY: 
+    const newCategories = [...state.categories, action.payload];
+    return Object.assign({}, state, {
+      categories: newCategories
+    });
+    case REMOVE_CATEGORY: 
+    const filteredCategories = state.categories.filter(category => category !== action.payload);
+    return Object.assign({}, state, {
+      categories: filteredCategories
+    });
         default:
       return state;
   }

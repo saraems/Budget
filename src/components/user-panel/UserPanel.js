@@ -9,7 +9,7 @@ import Evaluation from "./Evaluation/Evaluation";
 import Comparison from "./Comparison/Comparison";
 import Expenses from "./Expenses/Expenses";
 import Savings from "./Savings/Savings";
-import Uploaded from "./Uploaded/Uploaded";
+import Uploaded from "./Uploaded/Uploaded.jsx";
 
 class UserPanel extends Component {
   render() {

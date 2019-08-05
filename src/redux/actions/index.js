@@ -27,15 +27,9 @@ const uploadFile = (file, filePath) => ({
 
 //add categories
 
-const addCategory = category => ({
-  type: ADD_CATEGORY,
-  category: category,
-});
+const addCategory = category => {return {type: ADD_CATEGORY, payload: category.payload}};
 
-const removeCategory = category => ({
-  type: REMOVE_CATEGORY,
-  category: category
-});
+const removeCategory = category => { return {type: REMOVE_CATEGORY, payload: category.payload}};
 
 const addArticle = article => { return {type: 'ADD_RTICLE', payload: {title: article.title, addingDate: article.addingDate}}}
 

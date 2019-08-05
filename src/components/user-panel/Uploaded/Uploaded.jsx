@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Uploaded.scss";
 import { connect } from "react-redux";
 
+const mapStateToProps = (state) => {return {categories: state.categories}};
 
 const user = {
   expenses: {
@@ -39,7 +40,7 @@ const csv = [
   }
 ];
 
-class Uploaded extends Component {
+class Uploaded = () => {
   constructor(props) {
     super(props);
     this.state = {
@@ -140,9 +141,10 @@ class Uploaded extends Component {
   }
 }
 
-// const mapStateToProps = (state: RootState) => ({
-//   categories: expenses.categories(state),
-// });
+
+// const mapStateToProps = state => {
+//   return { categories: state.categories };
+// };
 
 // export default connect(
 //   mapStateToProps,
@@ -150,5 +152,8 @@ class Uploaded extends Component {
 //     contentDescriptionChanged: createActions.contentDescriptionChanged,
 //   }
 // )(Uploaded);
+
+const Categories = connect(mapStateToProps)(Uploaded);
+
 
 export default Uploaded;
