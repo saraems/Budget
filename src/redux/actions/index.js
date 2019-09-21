@@ -27,10 +27,11 @@ const uploadFile = (file, filePath) => ({
 
 //add categories
 
-const addCategory = category => {return {type: ADD_CATEGORY, payload: category.payload}};
-
+const addCategory = category => { 
+  console.log('category Added', category); 
+  return {type: ADD_CATEGORY, payload: category.payload}
+};
 const removeCategory = category => { return {type: REMOVE_CATEGORY, payload: category.payload}};
-
 const addArticle = article => { return {type: 'ADD_RTICLE', payload: {title: article.title, addingDate: article.addingDate}}}
 
 export {
@@ -38,4 +39,4 @@ export {
   addCategory,
   removeCategory,
   addArticle
-} 
+}

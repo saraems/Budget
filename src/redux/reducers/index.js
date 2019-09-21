@@ -86,20 +86,20 @@ const initialState = {
 function rootReducer(state = initialState, action) {
   switch (action.type) {
     case ADD_CATEGORY: 
+    console.log('state', state)
     const newCategories = [...state.categories, action.payload];
     return Object.assign({}, state, {
       categories: newCategories
     });
     case REMOVE_CATEGORY: 
-    const filteredCategories = state.categories.filter(category => category !== action.payload);
+    const updatedCategories = state.categories.filter(category => category !== action.payload);
     return Object.assign({}, state, {
-      categories: filteredCategories
+      categories: updatedCategories
     });
         default:
       return state;
   }
 };
-
 
 export default rootReducer;
 

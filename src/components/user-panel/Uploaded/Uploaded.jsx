@@ -1,29 +1,8 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "./Uploaded.scss";
 import { connect } from "react-redux";
-
-const mapStateToProps = (state) => {return {categories: state.categories}};
-
-const user = {
-  expenses: {
-    categories: [
-      "Mieszkanie",
-      "Żywność i środki czystości",
-      "Internet i telefon",
-      "Przejazdy",
-      "Edukacja",
-      "Podróże",
-      "Jedzenie poza domem",
-      "Zdrowie i Uroda",
-      "Ubrania",
-      "Rozrywka",
-      "Prezenty",
-      "Elektronika",
-      "Kary",
-      "Inne"
-    ]
-  }
-};
+import { addCategory, removeCategory } from "../../../redux/actions/";
+import { ADD_CATEGORY, REMOVE_CATEGORY } from '../../../redux/containers/action-types';
 
 const csv = [
   {
@@ -40,54 +19,29 @@ const csv = [
   }
 ];
 
-class Uploaded = () => {
-  constructor(props) {
-    super(props);
-    this.state = {
-      categories: user.expenses.categories,
-      newCategory: "",
-      errorMessage: ""
-    };
-  }
+const Categories = ({categories, addCategory, removeCategory}) => {
 
-  addNewCategory = () => {
-    if (this.state.newCategory) {
-      this.setState({
-        categories: [...this.state.categories, this.state.newCategory]
-      });
-    }
-    console.log(this.state.newCategory);
-  };
+  const [newCategory, setCategory] = useState('');
 
-  saveCategory = e => {
-    console.log(e.target.value);
-    this.setState({
-      newCategory: e.target.value
-    });
-  };
-
-  removeCategory = category => {
-    this.setState({
-      categories: this.state.categories.filter(
-        oldCategory => oldCategory !== category
-      )
-    });
-    console.log("removed", category);
-  };
-
-  render() {
+  const add = (newCategory) => {
+    console.log('new >>', newCategory, '>>')
+    addCategory(newCategory)
+    setCategory('');
+  }  
     return (
       <>
         <div className="row">
           <section className="col-12-12 user_panel__categories_container">
             <p>Twoje kategorie: </p>
-            {this.state.categories.map(category => {
+            {categories.map(category => {
               return (
-                <button className="action__sharp_btn_color_hover category_btn">
+                <button 
+                className="action__sharp_btn_color_hover category_btn" 
+                key={category}>
                   {category}
                   <i
-                    class="fas fa-times"
-                    onClick={category => this.removeCategory(category)}
+                    className="fas fa-times"
+                    onClick={ () => removeCategory(category)}
                   />
                 </button>
               );
@@ -99,15 +53,16 @@ class Uploaded = () => {
             Dodaj nowa kategorie:
             <input
               className="uploaded__category_input"
-              onChange={e => this.saveCategory(e)}
+              onChange={(e) => setCategory(e.target.value)}
+              value={newCategory}
             />
             <button
-              onClick={this.addNewCategory}
+              onClick={ () => add(newCategory)}
               className="action__btn_sharp add_category_btn"
             >
-              <i class="fas fa-plus" />
+              <i className="fas fa-plus" />
             </button>
-            <p>{this.state.errorMessage}</p>
+            {/* <p>{'Error Message'}</p> */}
           </section>
         </div>
 
@@ -121,14 +76,14 @@ class Uploaded = () => {
 
           {csv.map(expense => {
             return (
-              <div className="row">
+              <div className="row" kay={expense.costs}>
                 <div className="col-1-12"> {expense.date} </div>
                 <div className="col-6-12">{expense.description}</div>
                 <div className="col-1-12">{expense.costs} PLN</div>
                 <div className="col-4-12 uploaded_file__select_category">
                   <select>
-                    {this.state.categories.map(category => {
-                      return <option> {category} </option>;
+                    {categories.map(category => {
+                      return <option key={category}> {category} </option>;
                     })}
                   </select>
                 </div>
@@ -138,22 +93,18 @@ class Uploaded = () => {
         </section>
       </>
     );
-  }
 }
 
+const mapStateToProps = state => {
+  return { categories: state.categories}
+};
 
-// const mapStateToProps = state => {
-//   return { categories: state.categories };
-// };
+function mapDispatchToProps(dispatch) {
+  return {
+    addCategory: category => dispatch(addCategory({type: ADD_CATEGORY, payload: category})),
+    removeCategory: category => dispatch(removeCategory({type: REMOVE_CATEGORY, payload: category}))
+  };
+}
 
-// export default connect(
-//   mapStateToProps,
-//   {
-//     contentDescriptionChanged: createActions.contentDescriptionChanged,
-//   }
-// )(Uploaded);
-
-const Categories = connect(mapStateToProps)(Uploaded);
-
-
+const Uploaded = connect(mapStateToProps, mapDispatchToProps)(Categories);
 export default Uploaded;
