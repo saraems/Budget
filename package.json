@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://saraems.github.io/Budget/",
   "dependencies": {
-    "@amcharts/amcharts4": "^4.4.10",
+    "@amcharts/amcharts4": "^4.10.29",
     "@types/core-js": "^2.5.0",
     "core-js": "^3.1.3",
     "node-sass": "^4.11.0",
